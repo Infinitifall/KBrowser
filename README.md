@@ -1,2 +1,3 @@
 # KBrowser
-A refined browsing experience
+
+![Screenshot of the KBrowser webpage](./screenshot.jpeg)

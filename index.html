@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css?v=14">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    
+    <meta property="og:image" content='/assets/ctf++.jpeg'>
+
+    <title>KBrowser</title>
+    <meta name="title" content="KBrowser">
+    <meta property="og:title" content="KBrowser">
+
+    <meta name="description" content="A refined browsing experience">
+    <meta property="og:description" content="A refined browsing experience">
+
+    <meta name="twitter:card" content="summary">
+
+    <script src="script.js?v=14" defer></script>
+</head>
+<html>
+    <body>
+        <div class="global-div">
+            <div class="global-row">
+                <div class="global-column-1">
+                    <div class = wrapper-generic>
+                        <div class = wrapper-generic-inner>
+                            <h1 class="page-title"><a onclick="populate_wrapper(undefined, undefined);">KBrowser</a></h1>
+                            <div class="tagline">A refined browsing experience.</div>
+                            <div class="button-cgs-parent">
+                                <div class="button-cgs-title">Game modes</div>
+                                
+                                <button onclick="populate_wrapper(undefined, undefined);" class="button-cgs">All modes 🌎</button>
+                                <a onclick="lucky_wrapper_2(undefined, undefined, this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper('bhop');" class="button-cgs-bhop">Bhop 🤸🏃</button>
+                                <a onclick="lucky_wrapper_2('bhop', undefined, this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper('infect');" class="button-cgs-infect">Infect 🦠🧟</button>
+                                <a onclick="lucky_wrapper_2('infect', undefined, this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper('team');" class="button-cgs-team">Team 👥🏆</button>
+                                <a onclick="lucky_wrapper_2('team', undefined, this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper('solo');" class="button-cgs-solo">Solo 👤🥇</button>
+                                <a onclick="lucky_wrapper_2('solo', undefined, this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper('fun');" class="button-cgs-fun">Fun ♿💓</button>
+                                <a onclick="lucky_wrapper_2('fun', undefined, this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper('trade');" class="button-cgs-trade">Trade 📈💸</button>
+                                <a onclick="lucky_wrapper_2('trade', undefined, this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper('bots');" class="button-cgs-bots">Bots 🤖👻</button>
+                                <a onclick="lucky_wrapper_2('bots', undefined, this);" class="link-qj">🎲</a>
+                            </div>
+                            <div class="button-cgs-parent">
+                                <div  class="button-cgs-title">Regions</div>
+                                <button onclick="populate_wrapper(undefined, 'eu');" class="button-cgs-eu">Europe</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'eu', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'us-east');" class="button-cgs-us-west">US East</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'us-east', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'asia');" class="button-cgs-asia">Asia</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'asia', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'us-west');" class="button-cgs-us-east">US West</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'us-west', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'au');" class="button-cgs-au">Australia</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'au', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'ind');" class="button-cgs-ind">India</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'ind', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'brz');" class="button-cgs-brz">Brazil</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'brz', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'afr');" class="button-cgs-afr">Africa</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'afr', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'mx');" class="button-cgs-mx">Mexico</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'mx', this);" class="link-qj">🎲</a>
+
+                                <button onclick="populate_wrapper(undefined, 'arab');" class="button-cgs-arab">Arabia</button>
+                                <a onclick="lucky_wrapper_2(undefined, 'arab', this);" class="link-qj">🎲</a>
+                            </div>
+
+                            <div id="cgs-stats-grandparent" class="cgs-stats-grandparent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="global-column-2">
+                    <div class="wrapper-browser">
+                        <div id="cgs-parent" class="wrapper-browser-inner">
+                            <table id="cgs" class="cgs-table">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
