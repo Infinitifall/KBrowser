@@ -1,3 +1,3 @@
 # KBrowser
 
-![Screenshot of the KBrowser webpage](./screenshot.jpeg)
+![Screenshot of the KBrowser webpage](assets/screenshot.jpeg)
