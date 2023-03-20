@@ -122,6 +122,7 @@ function populate_table(cgs) {
         //special property
         let cells_4_innerhtml = "";
         if ("password" in cg) { cells_4_innerhtml = "🔒" }
+        else if ("verified" in cg) { cells_4_innerhtml = "💙"}
         else if ("dedicated" in cg) { cells_4_innerhtml = "★" }
         cells[4].innerHTML = start + cells_4_innerhtml + end;
     }
@@ -227,13 +228,21 @@ function get_cgs_stats(cgs){
 function compare_cgs(a, b, cgs) {
     let cgs_stats = get_cgs_stats(cgs);
 
-    const acceptable_player_ratio = 0.8;
+    // const acceptable_player_ratio = 0.8;
+    // if (
+    //     (a.players != b.players) &&
+    //     (
+    //         ((a.players / b.players) <= acceptable_player_ratio) ||
+    //         ((b.players / a.players) <= acceptable_player_ratio)
+    //     )
+    // ) {
+
     if (
-        (a.players != b.players) &&
-        (
-            ((a.players / b.players) <= acceptable_player_ratio) ||
-            ((b.players / a.players) <= acceptable_player_ratio)
-        )
+        ((a.players != b.players) && (a.players > 20 || b.players > 20)) ||
+        ((a.players <= 20 && a.players > 16 && b.players < 16) || (b.players <= 20 && b.players > 16 && a.players < 16)) ||
+        ((a.players <= 16 && a.players > 10 && b.players < 10) || (b.players <= 16 && b.players > 10 && a.players < 10)) ||
+        ((a.players <= 10 && a.players > 6 && b.players < 6) || (b.players <= 10 && b.players > 6 && a.players < 6)) ||
+        ((a.players != b.players) && (a.players <= 6 || b.players <= 6))
     ) {
         return b.players - a.players;
 
@@ -450,7 +459,7 @@ function polish_cgs(cgs, mode_type, region_group) {
 
         if ("ds" in cg[4]) { custom_game.dedicated = cg[4].ds; }
         if ("pw" in cg[4]) { custom_game.password = cg[4].ds; }
-
+        if (custom_game.total > 16 && custom_game.total < 40) { custom_game.verified = 1; }
         cgs_local.push(custom_game);
     }
 
