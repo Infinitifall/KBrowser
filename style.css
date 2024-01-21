@@ -17,20 +17,6 @@ a { color: #1e90ff; text-decoration: none; }
 a:visited { color: #1e90ff; }
 a:hover { color: #1e90ff; text-decoration: underline; }
 
-table {
-    border-collapse: collapse;
-    border: 0px;
-}
-
-th, td {
-    padding: 0.3em 0.5em;
-}
-
-tr:hover {
-    cursor:pointer;
-    background-color:#ffffff66;
-}
-
 button {
     font-family: fff-forward;
     background-color: #fff;
@@ -62,6 +48,11 @@ button:active {
 ::-webkit-scrollbar-track { background: #ddd; }
 ::-webkit-scrollbar-thumb { background: #777; }
 ::-webkit-scrollbar-thumb:hover { background: #666; }
+
+
+/*
+Styling for global divs
+*/
 
 
 .page-title a { color: #333; }
@@ -98,8 +89,41 @@ button:active {
     clear: both;
 }
 
+
+/*
+Styling for table
+*/
+
+.cgs-table {
+    border-collapse: collapse;
+    border: 0;
+}
+
+.cgs-table > thead > tr > th,
+.cgs-table > tbody > tr > th,
+.cgs-table > thead > tr > td,
+.cgs-table > tbody > tr > td {
+    padding: 0.3em 0.5em;
+}
+
+.cgs-table > thead > tr,
+.cgs-table > tbody > tr {
+    border: none;
+}
+
+.cgs-table > thead > tr:hover,
+.cgs-table > tbody > tr:hover {
+    cursor:pointer;
+    background-color:#ffffff66;
+}
+
+
+/*
+Styling for wrappers
+*/
+
 .wrapper-browser {
-    width:650px;
+    width: 650px;
     height: 2000px;
     max-height: calc(100vh - 6em);
     /* margin: auto; */
@@ -120,7 +144,7 @@ button:active {
 }
 
 .wrapper-generic {
-    width:400px;
+    width: 400px;
     height: 2000px;
     max-height: calc(100vh - 6em);
     /* margin: auto; */
@@ -154,6 +178,10 @@ button:active {
 .link-qj { cursor: pointer; }
 .link-qj:hover { text-decoration: none; }
 
+
+/*
+Styling for rows
+*/
 
 .cg-mode { color: #bbb }
 .cg-mode-bhop, .button-cgs-bhop { color: #634f94 }
@@ -191,49 +219,40 @@ button:active {
 .cgs-stats-grandparent { margin-top: 2em; }
 .cgs-stats { color: #666; padding: 0.3em 0em; }
 
-.cgs-table td a { display:block; }
-.cgs-table td a:hover { text-decoration: none; }
+.cgs-table >tbody > td a { display:block; }
+.cgs-table >tbody > td a:hover { text-decoration: none; }
 
-.cgs-table thead tr th:nth-child(1),
-.cgs-table tbody tr td:nth-child(1) {
+.cgs-table > thead > tr > th:nth-child(1),
+.cgs-table > tbody > tr > td:nth-child(1) {
     width: 5em;
     max-width: 5em;
     min-width: 5em;
     text-align: right;
 }
 
-.cgs-table thead .cgs-table-message th:nth-child(1),
-.cgs-table tbody .cgs-table-message td:nth-child(1) {
-    padding-top: 2em;
-    padding-bottom: 1em;
-    text-align: center;
-    font-size: 16px;
-    text-decoration: underline;
-}
-
-.cgs-table thead tr th:nth-child(2),
-.cgs-table tbody tr td:nth-child(2) {
+.cgs-table > thead > tr > th:nth-child(2),
+.cgs-table > tbody > tr > td:nth-child(2) {
     width: 22em;
     max-width: 22em;
     min-width: 22em;
 }
 
-.cgs-table thead tr th:nth-child(3),
-.cgs-table tbody tr td:nth-child(3) {
+.cgs-table > thead > tr > th:nth-child(3),
+.cgs-table > tbody > tr > td:nth-child(3) {
     width: 6em;
     max-width: 6em;
     min-width: 6em;
 }
 
-.cgs-table thead tr th:nth-child(4),
-.cgs-table tbody tr td:nth-child(4) {
+.cgs-table > thead > tr th:nth-child(4),
+.cgs-table > tbody > tr td:nth-child(4) {
     width: 3em;
     max-width: 3em;
     min-width: 3em;
 }
 
-.cgs-table thead tr th:nth-child(5),
-.cgs-table tbody tr td:nth-child(5) {
+.cgs-table > thead > tr th:nth-child(5),
+.cgs-table > tbody > tr td:nth-child(5) {
     width: 1em;
     max-width: 1em;
     min-width: 1em;
