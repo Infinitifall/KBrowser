@@ -6,7 +6,7 @@
 body {
     font-family: fff-forward;
     font-size: 15px;
-    background-image: url('assets/ctf++.jpeg');
+    background-image: url('assets/background.jpeg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -143,17 +143,11 @@ button:active {
     padding: 0em 0em;
 }
 
-.button-cgs-title {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-.button-cgs-parent {
+.cgs-buttons-parent {
     margin-top: 2em;
-    margin-bottom: 2em;
 }
 
-.button-cgs-parent button {
+.cgs-buttons-parent button {
     width: 10em;
 }
 
@@ -173,10 +167,12 @@ button:active {
 .cg-map { color: #2b7fd3; }
 .cg-map-repeated { color: #777; }
 .cg-map-non-empty { color: #777; }
+.cg-map-empty { color: #777; }
 .cg-map-full { color: #555; }
 
-.wrapper-cg-full a span { opacity: 0.7; }
-.wrapper-cg-non-empty a span { opacity: 0.7; }
+.wrapper-cg-full { opacity: 0.8; }
+.wrapper-cg-non-empty { opacity: 0.8; }
+.wrapper-cg-empty { opacity: 0.6; }
 
 .cg-region { color: #6ca640; }
 .cg-region-us-east, .button-cgs-us-east { color: #8e3346; }
@@ -193,15 +189,13 @@ button:active {
 .cg-players { color: #333; }
 
 .cgs-stats-grandparent { margin-top: 2em; }
-.cgs-stats { color: #444; padding: 0.3em 0em; }
+.cgs-stats { color: #666; padding: 0.3em 0em; }
 
 .cgs-table td a { display:block; }
 .cgs-table td a:hover { text-decoration: none; }
 
-.message-row { margin-top: 1em; }
-
-.cgs-table  thead tr th:nth-child(1),
-.cgs-table  tbody tr td:nth-child(1) {
+.cgs-table thead tr th:nth-child(1),
+.cgs-table tbody tr td:nth-child(1) {
     width: 5em;
     max-width: 5em;
     min-width: 5em;
@@ -213,7 +207,7 @@ button:active {
     padding-top: 2em;
     padding-bottom: 1em;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: underline;
 }
 
