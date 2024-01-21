@@ -26,6 +26,7 @@ async function update_cgs_global() {
 
     // update cgs_global
     cgs_global = await response.json();
+    return status;
 }
 
 /**
@@ -620,7 +621,7 @@ async function populate_wrapper(mode_type, regions_group) {
  * @param {String} mode_type Whitelisted mode type (null for all)
  * @param {String} regions_group Whitelisted regions group (null for all)
  */
-async function lucky_wrapper(mode_type, regions_group) {
+async function get_lucky_link(mode_type, regions_group) {
     // update cgs_global each time to minimize chance of being redirected into a full lobby
     let update_cgs_return = await update_cgs_global();
     if (update_cgs_return == null) { return null; }
@@ -674,11 +675,11 @@ async function lucky_wrapper(mode_type, regions_group) {
  * @param {String} regions_group Whitelisted regions group (null for all)
  * @param {Element} self
  */
-async function lucky_wrapper_2(mode_type, regions_group, self) {
+async function lucky_wrapper(mode_type, regions_group, self) {
     self.innerHTML = "⏳";
     
     // get lucky link and open in new tab
-    let lucky_link = await lucky_wrapper(mode_type, regions_group);
+    let lucky_link = await get_lucky_link(mode_type, regions_group);
     if (lucky_link == null) {
         self.innerHTML = "❌";
     } else {
