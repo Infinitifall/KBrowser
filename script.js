@@ -36,7 +36,7 @@ async function update_cgs_global() {
  */
 function timeout_fetching_cgs(interval) {
     update_cgs = true;
-    setTimeout( function() {timeout_fetching_cgs}, interval);
+    setTimeout( timeout_fetching_cgs, interval);
 }
 
 
