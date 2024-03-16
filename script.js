@@ -75,9 +75,10 @@ function populate_table(cgs) {
         let cg_players = "cg-players";
         let cg_special = "";
         if ("password" in cg) { cg_special = "🔒" }
-        else if (cg.public == 0) { cg_special = "⛏️" }
+        else if (cg.public == 0) { cg_special = "🛠️" }
         else if ("verified" in cg) { cg_special = "💙"}
-        else if ("dedicated" in cg) { cg_special = "★" }
+        else if ("extra_large" in cg) { cg_special = "🏟️" }
+        else if ("dedicated" in cg) { cg_special = "🔸" }
         
         // create nodes
         let span_elements = new Array();
@@ -396,7 +397,8 @@ function polished_cgs(cgs, mode_type, regions_group) {
         
         if ("ds" in cg[4]) { cg_2.dedicated = cg[4].ds; }
         if ("pw" in cg[4]) { cg_2.password = cg[4].pw; }
-        if (cg_2.total > 16 && cg_2.total < 40) { cg_2.verified = true; }
+        if (cg_2.total > 16 && cg_2.total <= 20) { cg_2.verified = true; }
+        if (cg_2.total > 20) { cg_2.extra_large = true; }
 
         if (
             (cg_2.public == 0) &&
